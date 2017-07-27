@@ -7,3 +7,4 @@ function projectConstructor(projectName, projectPath, skills, imageName, imagePa
   this.imageName = imageName;
   this.imagePath = imagePath;
 }
+// trolling
