@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Joel's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+</head>
+<body>
+  <header class="site-header clearfix">
+    <section class="heading-group-h1">
+      <h1>
+        Joel's Projects!
+      </h1>
+      <h2>You have 3 PHDS? Thats great, try clicking "forgot password" for me.</h2>
+    </section>
+    <nav class="main-nav">
+      <div class="icon-menu"></div>
+      <ul>
+        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
+        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+        <li><a href="http://github.com/JBEpstein" target="_blank" class="icon-github"> GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="articles">
+      <article class="template" data-category="cat">
+        <header>
+          <h1>Title</h1>
+          <div class="byline">
+            By <address><a href="">Author Name</a></address>
+            published <time pubdate datetime="2000-01-01">Publish Time</time>
+          </div>
+        </header>
+        <section class="article-body"></section>
+      </article>
+    </section>
+  </main>
+  <footer>
+    &copy;
+  </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="scripts/projectArticles.js"></script>
+<script src="scripts/article.js"></script>
+</body>
+<!-- Lul this is starting to come along -->
 </html>
