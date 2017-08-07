@@ -9,11 +9,12 @@ function project (rawDataObj) {
   this.category = rawDataObj.category;
   this.body = rawDataObj.body;
   this.publishedOn = rawDataObj.publishedOn;
+  this.img = rawDataObj.img;
+  console.log(this.img);
 }
 
 project.prototype.toHtml = function() {
   var $newproject = $('project.template').clone();
-  // var $newproject = $('project.template').clone();
   $newproject.removeClass('template');
   if (!this.publishedOn) $newproject.addClass('draft');
   $newproject.data('category', this.category);
@@ -24,6 +25,8 @@ project.prototype.toHtml = function() {
   $newproject.find('.project-body').html(this.body);
   $newproject.find('time[pubdate]').attr('datetime', this.publishedOn);
   $newproject.find('time[pubdate]').attr('title', this.publishedOn);
+  $newproject.find('.projectimgs').attr('src', this.img);
+  $newproject.append(this.img);
   // Display the date as a relative number of 'days ago'
   $newproject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newproject.append('<hr>');
