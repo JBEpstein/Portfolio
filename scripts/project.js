@@ -9,11 +9,11 @@ function project (rawDataObj) {
   this.category = rawDataObj.category;
   this.body = rawDataObj.body;
   this.publishedOn = rawDataObj.publishedOn;
+  this.img = rawDataObj.img;
 }
 
 project.prototype.toHtml = function() {
   var $newproject = $('project.template').clone();
-  // var $newproject = $('project.template').clone();
   $newproject.removeClass('template');
   if (!this.publishedOn) $newproject.addClass('draft');
   $newproject.data('category', this.category);
