@@ -41,3 +41,13 @@ rawData.forEach(function(articleObject) {
 articles.forEach(function(article) {
   $('#articles').append(article.toHtml());
 });
+// Attempt to add animation to Article when clicked. Larry C.
+$(document).ready(function(){
+  $('#articles').click(function(){
+    var div = $('div');
+        div.animate({height: '200px', opacity: '0.4'}, "slow");
+        div.animate({backgroundColor:'#4E1402'}, 300);
+        div.animate({height: '45px', opacity: '0.8'}, "slow");
+        div.animate({backgroundColor:'#943D20'}, 100);
+  });
+});
