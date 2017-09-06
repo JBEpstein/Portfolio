@@ -88,7 +88,7 @@ projectView.create = function() {
   let project;
   $('#projects').empty();
 
-  project = new project({
+  Project = new Project({
     title: $('#project-title').val(),
     author: $('#project-author').val(),
     authorUrl: $('#project-author-url').val(),
@@ -109,7 +109,7 @@ projectView.create = function() {
 
 projectView.submit = function(event) {
   event.preventDefault();
-  let project = new project({
+  let Project = new Project({
     title: $('#project-title').val(),
     author: $('#project-author').val(),
     authorUrl: $('#project-author-url').val(),
@@ -118,12 +118,12 @@ projectView.submit = function(event) {
     publishedOn: $('#project-published:checked').length ? new Date() : null
   });
 
-  project.insertRecord();
+  Project.insertRecord();
 }
 
 projectView.initIndexPage = function() {
-  project.all.forEach(function(project){
-    $('#projects').append(project.toHtml())
+  Project.all.forEach(function(Project){
+    $('#projects').append(Project.toHtml())
   });
 
   projectView.populateFilters();
