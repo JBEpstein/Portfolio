@@ -30,7 +30,7 @@ body {
  * Correct `block` display not defined for `main` in IE 11.
  */
 
-project,
+article,
 aside,
 details,
 figcaption,
@@ -128,7 +128,7 @@ dfn {
 }
 
 /**
- * Address variable `h1` font-size and margin within `section` and `project`
+ * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 

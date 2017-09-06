@@ -1,5 +1,5 @@
 .site-header {
-  background: #EDDBCD;
+  background: #003AFF;
 }
 
 .heading-group-h1 {
@@ -50,6 +50,12 @@
 .byline a {
   font-weight: bold;
   text-decoration: none;
+}
+
+#article-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
 }
 
 @media only screen and (min-width: 640px) {
